@@ -1,8 +1,8 @@
-# Snake, Water and Gun game in Python
+# Rock, Paper and Scissors game in Python
 import random
 
 def game():
-    user = int(input("[Users turn] - Snake (1), Water (2) or Gun (3):  "))
+    user = int(input("[Users turn] - Rock (1), Paper (2) or Scissors (3):  "))
     computer = random.randint(1,3)
 
     if user == computer:
@@ -11,32 +11,32 @@ def game():
         print(computer)
         
     elif user == 1 and computer == 2:
-        print("Snake beat water. You Won !!!")
+        print("Paper traps rock. Computer Won")
         print(user)
         print(computer)
         
     elif user == 2 and computer == 1:
-        print("Snake beat water. Computer Won.")
+        print("Paper traps rock. You Won !!!")
         print(user)
         print(computer)
         
     elif user == 2 and computer == 3:
-        print("Water beat gun. You Won !!!")
+        print("Scissor cuts Paper. Computer Won.")
         print(user)
         print(computer)
         
     elif user == 3 and computer == 2:
-        print("Water beat Gun. Computer Won.")
+        print("Scissor cuts Paper. You Won !!!")
         print(user)
         print(computer)
         
     elif user == 1 and computer == 3:
-        print("Gun beat snake. Computer Won.")
+        print("Rock breaks Scissor. You Won !!!")
         print(user)
         print(computer)
 
     elif user == 3 and computer == 1:
-        print("Gun beat snake. You Won !!!")
+        print("Rock breaks Scissor. Computer Won.")
         print(user)
         print(computer)
 
@@ -45,4 +45,5 @@ def game():
 
     return None
 
-game()
+while True:
+    game()
